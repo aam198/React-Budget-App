@@ -5,6 +5,8 @@
   --main-color: #29394f;
 
   --component-bg: #16263c;
+
+
 }
 
 * {
@@ -56,7 +58,16 @@ h4 {
 }
 
 .main-container{
-  background-color: var(--main-color);
+
+
+  background: rgba( 75, 121, 161, 0.50 );
+  /* box-shadow: 0 8px 32px 0 rgba(45, 51, 140, 0.12); */
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+ 
+  /* background-color: var(--main-color); */
   height: 80vh;
   width: 100%;
   padding: 10px 10px;
@@ -64,7 +75,13 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color: var(--component-bg);
+  /* background-color: var(--component-bg); */
+  background: rgba( 22, 38, 60, 0.50 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: white;
   box-shadow: var(--box-shadow);
   padding: 20px;
