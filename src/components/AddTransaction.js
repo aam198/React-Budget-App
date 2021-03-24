@@ -19,6 +19,19 @@ export const AddTransaction = ()=> {
             amount: +amount
         }
         addTransaction(newTransaction);
+
+        // clearing out the input form
+        setText({
+            text: ' '
+        });
+
+        setAmount({
+            amount: ''
+        });
+
+        
+
+
      }
     
 
