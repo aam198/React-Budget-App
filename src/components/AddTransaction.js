@@ -21,15 +21,9 @@ export const AddTransaction = ()=> {
         addTransaction(newTransaction);
 
         // clearing out the input form
-        setText({
-            text: ' '
-        });
+        setAmount('');
 
-        setAmount({
-            amount: ''
-        });
-
-        
+        setText('');
 
 
      }
@@ -43,6 +37,7 @@ export const AddTransaction = ()=> {
                 <label htmlFor="text">Text</label>
                 <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter text..." />
                 </div>
+                
                 <div className="form-control">
                 <label htmlFor="amount">Amount <br />
                     (negative - expense, positive - income)</label
