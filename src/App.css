@@ -42,7 +42,7 @@ body {
 
 
 h1 {
-  font-size: 2.488rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
   margin-top: 1rem;
   color: white;
@@ -55,7 +55,7 @@ h2{
   font-size: 2.074rem;
   margin: .3em;
   font-family: 'Inter', sans-serif;
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-500);
 }
 
 h3 {
@@ -241,15 +241,23 @@ form{
 label {
   display: inline-block;
   margin: 0 0 12px 0;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  
+}
+
+input{
+  border-radius: 1rem;
 }
 
 input[type='text'],
 input[type='number'] {
+  border-radius: 1rem;
+  font-family: 'Inter', sans-serif;
   border: 1px solid #dedede;
   border-radius: 2px;
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   padding: 10px;
   width: 100%;
 }
