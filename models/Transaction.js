@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // Creating Data Schema 
 const TransactionSchema = new mongoose.Schema({
-    text:{
+    text: {
         type: String,
         trim: true,
         required: [true, 'Please add some text']
@@ -17,3 +17,4 @@ const TransactionSchema = new mongoose.Schema({
     }
 });
 
+module.exports = mongoose.model('Transaction',TransactionSchema);
