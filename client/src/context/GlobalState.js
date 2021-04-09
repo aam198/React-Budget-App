@@ -35,18 +35,44 @@ export const GlobalProvider = ({ children }) => {
             });
         }
     }
-    function deleteTransaction(id){
-        dispatch({
-            type: 'DELETE_TRANSACTION',
-            payload: id
-        });
+    async function deleteTransaction(id){
+        try{
+            await axios.delete(`/api/v1/transactions/${id}`);
+            dispatch({
+                type: 'DELETE_TRANSACTION',
+                payload: id
+            });
+        }catch(err){
+            dispatch({
+                type: 'DELETE_ERROR', 
+                payload: err.response.data.error
+            });
+        }
+       
     }
 
-    function addTransaction(transaction){
-        dispatch({
-            type: 'ADD_TRANSACTION',
-            payload:transaction
-        });
+   async  function addTransaction(transaction){
+        // Since adding content, we need to add content type object
+    const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+        try{
+            const res = await axios.post('/api/v1/transactions', transaction, config);
+
+            dispatch({
+                type: 'ADD_TRANSACTION',
+                payload:res.data.data
+            }); 
+        } catch(err){
+            dispatch({
+                type: 'ADD_ERROR', 
+                payload: err.response.data.error
+            });
+        }
+        
     }
 
     
