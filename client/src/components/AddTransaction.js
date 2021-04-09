@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import { numberWithCommas } from '../utils/format';
 
 export const AddTransaction = ()=> {
 
@@ -43,7 +44,7 @@ export const AddTransaction = ()=> {
                 <label htmlFor="amount">Amount: <br />
                        (negative - expense, positive - income)</label
                 >
-                <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
+                <input type="text" value={numberWithCommas(amount)} onChange={(e) => setAmount(e.target.value)} placeholder="Enter $ amount..." />
                 </div>
                 <button className="btn">Add transaction</button>
             </form>
