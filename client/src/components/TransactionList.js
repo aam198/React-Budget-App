@@ -8,7 +8,7 @@ export default function TransactionList() {
 
     useEffect(() => {
         getTransactions();
-        //right now just firing off a warning to end loop, can add: eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return (
         <div className="history-container">
